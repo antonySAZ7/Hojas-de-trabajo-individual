@@ -1,5 +1,6 @@
+package main;
 import java.io.*;
-import java.util.*;
+// esta clase solo sirve para leer el csv
 
 public class LectorCSV {
     

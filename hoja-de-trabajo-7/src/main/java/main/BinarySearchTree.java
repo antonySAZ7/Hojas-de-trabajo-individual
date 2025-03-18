@@ -6,7 +6,7 @@
  * Referencia: ChatGPT (2025). "Implementación de Árboles Binarios de Búsqueda en Java."
  * OpenAI. https://openai.com/
  */
-
+package main;
 public class BinarySearchTree<K extends Comparable<K>, V> {
     private Node root;
     
@@ -25,15 +25,27 @@ public class BinarySearchTree<K extends Comparable<K>, V> {
 
     }
     public void insert(K key, V value) {
+        if (key == null) {
+            throw new NullPointerException("Las claves no pueden ser nulas");
+        }
         root = insertRec(root, key, value);
     }
+    
 
     private Node insertRec(Node root, K key, V value) {
-        if (root == null) return new Node(key, value);
-        if (key.compareTo(root.key) < 0)
+        if (root == null) {
+            return new Node(key, value);
+        }
+    
+        int cmp = key.compareTo(root.key);
+        if (cmp < 0) {
             root.left = insertRec(root.left, key, value);
-        else
+        } else if (cmp > 0) {
             root.right = insertRec(root.right, key, value);
+        } else {
+            root.value = value; //
+        }
+    
         return root;
     }
 
@@ -54,10 +66,15 @@ public class BinarySearchTree<K extends Comparable<K>, V> {
     private void inOrderRec(Node root) {
         if (root != null) {
             inOrderRec(root.left);
-            System.out.println(root.value);
+            if (root.value instanceof String) {
+                System.out.print(((String) root.value).trim() + "\n");
+            } else {
+                System.out.print(root.value + "\n");
+            }
             inOrderRec(root.right);
         }
     }
+    
 }
     
 
