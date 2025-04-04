@@ -18,7 +18,7 @@ public class Principal {
             int opcion = Integer.parseInt(System.console().readLine());
             switch(opcion){
                 case 1:
-                    LectorCSV.cargarProducto("productos.csv", skuTree, nameTree);
+                    LectorCSV.cargarProducto("inventario_ropa_deportiva_30.csv", skuTree, nameTree);
                     break;
                 case 2:
                     System.out.println("Ingrese el SKU del producto a buscar: ");
