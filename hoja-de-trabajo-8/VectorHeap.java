@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+// Esta clase representa una cola de prioridad usando un VectorHeap
+
 public class VectorHeap<E extends Comparable<E>> {
 
     protected ArrayList<E> data; 

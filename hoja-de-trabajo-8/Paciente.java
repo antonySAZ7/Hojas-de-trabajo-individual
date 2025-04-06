@@ -1,5 +1,5 @@
 
-
+// esta clase repreesenta un paciente en la cola de espera
 public class Paciente implements Comparable<Paciente>{
 
         private String nombre;
