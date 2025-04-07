@@ -1,8 +1,9 @@
+package src;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.PriorityQueue;
 import java.util.Scanner;
-;
+
 // Esta es la clase principal z
 public class Main{
 

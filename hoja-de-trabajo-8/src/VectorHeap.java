@@ -1,3 +1,5 @@
+package src;
+
 import java.util.ArrayList;
 
 // Esta clase representa una cola de prioridad usando un VectorHeap
