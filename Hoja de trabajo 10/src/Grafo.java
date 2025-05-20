@@ -1,7 +1,7 @@
 
 
 public class Grafo{
-    private final int INF =  Integer.MAX_VALUE;
+    private final int INF =  Integer.MAX_VALUE/2;
     private int[][] matrizAdjacencia;
     private final int V = 5;
 
